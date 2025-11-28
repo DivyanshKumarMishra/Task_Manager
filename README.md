@@ -66,14 +66,6 @@ Preview the production build locally:
 npm run preview
 ```
 
-#### Linting
-
-Check code quality and lint errors:
-
-```bash
-npm run lint
-```
-
 ## 📂 Project Structure
 
 ```
