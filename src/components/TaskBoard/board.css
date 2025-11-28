@@ -1,0 +1,112 @@
+body.light {
+  --input-bg: #f9f9fb;
+  --input-border: #d4d4d8;
+  --column-bg: #f9f9fb;
+  --task-bg: #ffffff;
+}
+
+body.dark {
+  --input-bg: #2b2b31;
+  --input-border: #3d3d42;
+  --column-bg: #2b2b31;
+  --task-bg: #2c2c33;
+}
+
+.task-board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .task-board {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .task-board {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.kanban-column {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 10px;
+  padding: 16px 0px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.column-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--input-border);
+
+  background: linear-gradient(90deg, #6a5af9, #ff4dde);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.task-column-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 16px;
+  min-height: 60px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.task-wrapper {
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--task-bg);
+  border-left: 6px solid #aaaaaa;
+  transition: 0.25s ease;
+}
+
+.task-wrapper.in-progress {
+  background: #fefbc4;
+  border-left-color: #c6ac28;
+}
+
+.task-wrapper.completed {
+  background: #c0fbce;
+  border-left-color: #4caf50;
+}
+
+.task-wrapper.not-started {
+  background: #ffc4c4;
+  border-left-color: #ff4d4d;
+}
+
+.task-wrapper.dragging {
+  background: #e0c3ff;
+  border-left-color: #9d4dff;
+}
+
+body.dark .task-wrapper.in-progress {
+  background: #5f5d44;
+}
+
+body.dark .task-wrapper.completed {
+  background: #47634b;
+}
+
+body.dark .task-wrapper.not-started {
+  background: #624747;
+}
+
+body.dark .task-wrapper.dragging {
+  background: #584965;
+}
