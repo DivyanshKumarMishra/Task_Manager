@@ -48,9 +48,9 @@ function Task({
 
   const toggleCompleted = () => {
     if (task.status === 'completed') {
-      updateStatus(task.id, task.prev_status || 'not-started');
+      updateStatus(task.id, 'in-progress');
     } else {
-      updateStatus(task.id, 'completed', task.status);
+      updateStatus(task.id, 'completed');
     }
   };
 

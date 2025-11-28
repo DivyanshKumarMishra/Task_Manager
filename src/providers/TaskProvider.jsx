@@ -9,7 +9,7 @@ function TaskProvider({ children }) {
     (taskId, text) => {
       setTasks((prevTasks) => [
         ...prevTasks,
-        { id: taskId, text, status: 'not-started', prev_status: 'not-started' },
+        { id: taskId, text, status: 'not-started' },
       ]);
     },
     [setTasks]
@@ -32,9 +32,12 @@ function TaskProvider({ children }) {
   );
 
   const updateStatus = useCallback(
-    (id, status, prev_status) => {
+    (id, status) => {
       setTasks((prevTasks) =>
-        prevTasks.map((t) => (t.id !== id ? t : { ...t, status, prev_status }))
+        prevTasks.map((t) => {
+          if (t.id !== id) return t;
+          return { ...t, status };
+        })
       );
     },
     [setTasks]
