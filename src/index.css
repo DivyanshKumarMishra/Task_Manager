@@ -139,6 +139,11 @@ input:focus {
   box-shadow: 0 0 0 3px rgba(122, 92, 255, 0.25);
 }
 
+.search-box {
+  width: 100%;
+  max-width: 500px;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -211,7 +216,7 @@ input:focus {
     width: 100%;
   }
 
-  .header-row{
+  .header-row {
     flex-direction: column;
     gap: 20px;
     width: 100%;
