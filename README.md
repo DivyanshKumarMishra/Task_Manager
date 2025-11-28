@@ -1,16 +1,94 @@
-# React + Vite
+# Kanban Style Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive task management application built with React and featuring drag-and-drop functionality for organizing tasks across different columns (To Do, In Progress, Done).
 
-Currently, two official plugins are available:
+## 🛠️ Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** - UI library for building component-based interfaces
+- **Vite** - Modern, lightning-fast build tool and development server
+- **@hello-pangea/dnd** - Drag-and-drop library for Kanban functionality
+- **@heroicons/react** - Beautiful, hand-crafted SVG icon library
 
-## React Compiler
+## 📋 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ✨ Drag-and-drop task management across columns
+- 📝 Create, read, update, and delete tasks
+- 🎨 Clean and intuitive user interface
+- 📱 Responsive design
+- ⚡ Fast development experience with Vite
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v16 or higher recommended)
+- npm or yarn package manager
+
+### Installation
+
+1. **Clone or navigate to the project directory:**
+
+   ```bash
+   cd task_manager
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+### Running the Application
+
+#### Development Mode
+
+Start the development server with hot module replacement:
+
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173` (or the next available port)
+
+#### Production Build
+
+Create an optimized production build:
+
+```bash
+npm run build
+```
+
+#### Preview Production Build
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+#### Linting
+
+Check code quality and lint errors:
+
+```bash
+npm run lint
+```
+
+## 📂 Project Structure
+
+```
+task_manager/
+├── src/
+│   ├── components/      # Reusable React components
+│   ├── contexts/        # React Context API files
+│   ├── hooks/           # Custom React hooks
+│   ├── providers/       # Context providers
+│   ├── App.jsx          # Main application component
+│   ├── main.jsx         # Application entry point
+│   └── index.css        # Global styles
+├── public/              # Static assets
+├── package.json         # Project dependencies and scripts
+├── vite.config.js       # Vite configuration
+├── eslint.config.js     # ESLint configuration
+└── README.md            # This file
+```
